@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+		<title>RegistrationForm_v7 by Colorlib</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="static/css/style3.css">
+</head>
+
+<body>
+
+<div class="wrapper">
+			<div class="inner">
+                <h3>Start Predicting</h3>
+					<p>Enter The Following Parapmters and the Result Will Dispalay.</p>
+					<label class="form-group">
+						<input type="text" class="form-control"  required>
+						<span>Enter Patient Name</span>
+						<span class="border"></span>
+                        </label>
+
+	<form method="post" action="{{ url_for("result") }}">
+
+		<p>
+			<label>
+				bicarbonate (min=0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="number" name="bicarbonate" required min="0" step="0.001" />
+			</label><br><br>
+		</p>
+
+		<p>
+			<label>
+				urine_output (min=0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="number" name="urine_output" required min="0" step="0.001" />
+			</label><br><br>
+		</p>
+
+		<p>
+			<label>
+				urea_nitrogen (min=0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="number" name="urea_nitrogen" required min="0" step="0.001" />
+			</label><br><br>
+		</p>
+
+		<p>
+			<label>
+				leucocyte (min=0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="number" name="leucocyte" required min="0" step="0.001" />
+			</label><br><br>
+		</p>
+
+		<p>
+			<label>
+				blood_calcium (min=0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="number" name="blood_calcium" required min="0" step="0.001" />
+			</label><br><br>
+		</p>
+
+		<p>
+			<label>
+				renal_failure (No=0, Yes=1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="number" name="renal_failure" required min="0" max="1" step="1" />
+			</label><br><br>
+		</p>
+
+		<p>
+			<label>
+				heart_rate (min=0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="number" name="heart_rate" required min="0" step="0.001" />
+			</label><br><br>
+		</p>
+
+		<p>
+			<label>
+				deficiencyanemias (No=0, Yes=1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="number" name="deficiencyanemias" required min="0" max="1" step="1" />
+			</label><br><br>
+		</p>
+
+		<p>
+			<label>
+				atrialfibrillation (No=0, Yes=1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="number" name="atrialfibrillation" required min="0" max="1" step="1" />
+			</label><br><br>
+		</p>
+
+		<p>
+			<label>
+				sp_o2 (min=0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="number" name="sp_o2" required min="0" step="0.001" />
+			</label><br><br>
+		</p>
+
+		<p><button>Predict mortality</button></p>
+
+	</form>
+                </div>
+		</div>
+
+</body>
+
+</html>
